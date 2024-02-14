@@ -62,6 +62,27 @@
             background-color: #FF5252;
             color: #fff;
         }
+
+         .romantic-letter {
+            max-width: 800px;
+            font-style: italic;
+            padding: 20px;
+            background-color: #fdd2e2;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            line-height: 1.5;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .romantic-letter p:{
+            font-size: 40px;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
     </style>
     <title>Valentine's Day</title>
 </head>
@@ -76,7 +97,7 @@
                 src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
                 alt="Bear GIF"
             />
-            <h1>Pame, will you be my Valentine?</h1>
+            <h1>Pamelina, will you be my Valentine?</h1>
             <button id="yes-button" class="button green-button" onclick="showRomanticPage()">Yes</button>
             <button id="no-button" class="button red-button" onclick="showNoScenarios()">No</button>
             <button id="are-you-sure-button" class="button red-button hidden" onclick="showRomanticPage()">Are you sure?</button>
@@ -90,9 +111,11 @@
                 src="https://gifdb.com/images/high/kiss-goodnight-cute-bears-dl1g095ttb1rr8i8.webp"
                 alt="Hearts GIF"
             />
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; margin-top: 20px;">
-                <h1>Ti amo!</h1>
-            </div>
+             <div class="romantic-letter">
+                <p>“I would live alone for fifty years to have one day with you.”</p>
+                <p>Ti amo</p>
+             </div>
+
             <button class="button" onclick="goBack()">Di nuovo! Di nuovo!</button>
             </body2>
         </div>
@@ -100,13 +123,13 @@
         <div id="dead-penguin-content" class="valentine-container hidden">
             <img
                 class="h-[200px]"
-                style="width: 400px; height: 240px;"
+                style="width: 200px; height: 120px;"
                 src="images/piangles.png"
                 alt="Dead Penguin GIF"
             />
             <img
                 class="h-[200px]"
-                style="width: 400px; height: 240px;"
+                style="width: 200px; height: 120px;"
                 src="https://gifdb.com/images/high/pinggu-penguin-walking-a9qchs88be6ixmxh.gif"
                 alt="Dead Penguin GIF"
             />
