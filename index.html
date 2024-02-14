@@ -1,46 +1,171 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>San Valentino</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="FreeHTML5.co" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdd2e2; /* Pastel Rose */
+            text-align: center;
+            background-image: url("https://media4.giphy.com/media/ugEWbEMH0gm2c/giphy.gif?cid=ecf05e477rx659qgvcpuisr9vpbwq27ekm7ve6p08pr4dtlz&ep=v1_gifs_related&rid=giphy.gif&ct=g"); /* Hearts Background */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+        .valentine-container {
+            text-align: center;
+        }
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
-    
+        .hidden {
+            display: none;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        .button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
 
-    </head>
-    <body>
-    
-    <h1>Ciao</h1>
-    <div id="root"></div>
+        .green-button {
+            background-color: #4CAF50;
+            color: #fff;
+        }
 
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+        .red-button {
+            background-color: #FF5252;
+            color: #fff;
+        }
+    </style>
+    <title>Valentine's Day</title>
+</head>
+<body>
 
-    <script src="js/main.js"></script>
+    <div id="valentine-page" class="centered-container">
 
-    </body>
+        <div id="valentine-content" class="valentine-container">
+            <img
+                class="h-[200px]"
+                style="width: 300px; height: 400px;"
+                src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDAxdHA2N2x6NHA2cG1wbmN6cjFyaXd4dXlsdHQ4cW5xODJpdGp4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8QbwUh40Hl96yMgvOx/giphy.gif"
+                alt="Bear GIF"
+            />
+            <h1>Pame, will you be my Valentine?</h1>
+            <button id="yes-button" class="button green-button" onclick="showRomanticPage()">Yes</button>
+            <button id="no-button" class="button red-button" onclick="showNoScenarios()">No</button>
+            <button id="are-you-sure-button" class="button red-button hidden" onclick="showRomanticPage()">Are you sure?</button>
+        </div>
+
+        <div id="romantic-content" class="valentine-container hidden">
+            <img
+                class="h-[200px]"
+                style="width: 400px; height: 240px;"
+                src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm5tOXVzeTc1ZzU0dWx3ZWdvM2hlaGJndWVpa2t3OXlnbTFoM2x5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WG4uYteu6J0teNVxpT/giphy.gif"
+                alt="Hearts GIF"
+            />
+            <img
+                class="h-[200px]"
+                style="width: 400px; height: 240px;"
+                src="https://gifdb.com/images/high/samoyed-dog-boop-kiss-799gkwiee5mtur30.gif"
+                alt="Romantic GIF"
+            />
+
+            <div style="background-color: #fff; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                <h1>Ti amo!</h1>
+            <img
+                class="h-[200px]"
+                style="width: 400px; height: 240px;"
+                src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW05YTMxd2htMmVqcWJiZXdheWFjbXVqMW5tc242cW9xdGV6YXcxMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4N1wOi78ZGzSB6H7vK/giphy.gif"
+                alt="Romantic GIF"
+            />
+            </div>
+            <button class="button" onclick="goBack()">Di nuovo!</button>
+
+        </div>
+
+        <div id="dead-penguin-content" class="valentine-container hidden">
+            <img
+                class="h-[200px]"
+                style="width: 400px; height: 240px;"
+                src="piangles.png"
+                alt="Dead Penguin GIF"
+            />
+            <img
+                class="h-[200px]"
+                style="width: 400px; height: 240px;"
+                src="https://gifdb.com/images/high/pinggu-penguin-walking-a9qchs88be6ixmxh.gif"
+                alt="Dead Penguin GIF"
+            />
+            <div style="background-color: #fff; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                <h1>Piangles :(</h1>
+            <img
+                class="h-[200px]"
+                style="width: 400px; height: 240px;"
+                src="https://gifdb.com/images/high/heart-pop-breaking-up-pq09c690703drzlu.gif"
+                alt="Dead Penguin GIF"
+            />
+            
+            </div>
+            <button class="button" onclick="goBack()">Riprova :(</button>
+        </div>
+    </div>
+
+    <script>
+        const noPhrases = [
+            "Sicura?",
+            "Sicura sicura?",
+            "Iténtalo De Nuevo",
+            "Pandro si sta arrabbiando",
+            "Fallo per Witton!",
+            "Last chance!",
+            "Sei sicurissima?",
+            "Ripensaci!",
+            "Me duele el corazon!",
+            "Che direbbe mimi!",
+            "mmm e` la tua risposta definitiva?",
+            "Auch, mi corazón :("
+        ];
+
+        let noIndex = 0;
+        let yesButtonSize = 16;
+
+        function showNoScenarios() {
+            if (noIndex < noPhrases.length - 1) {
+                document.getElementById('no-button').innerText = noPhrases[noIndex];
+                noIndex++;
+                yesButtonSize += 20;
+                document.getElementById('yes-button').style.fontSize = yesButtonSize + 'px';
+            } else {
+                document.getElementById('valentine-content').classList.add('hidden');
+                document.getElementById('dead-penguin-content').classList.remove('hidden');
+            }
+        }
+
+        function showRomanticPage() {
+            document.getElementById('valentine-content').classList.add('hidden');
+            document.getElementById('romantic-content').classList.remove('hidden');
+        }
+
+        function goBack() {
+            document.getElementById('valentine-content').classList.remove('hidden');
+            document.getElementById('romantic-content').classList.add('hidden');
+            document.getElementById('dead-penguin-content').classList.add('hidden');
+        }
+    </script>
+
+</body>
 </html>
